@@ -26,5 +26,12 @@ public class MainActivity extends AppCompatActivity {
         buttonChangeTextColor.setOnClickListener(v -> {
             textView.setTextColor(Color.RED);
         });
+
+        Button buttonChangeBackground =
+                findViewById(R.id.buttonChangeBackground);
+
+        buttonChangeBackground.setOnClickListener(v -> {
+            getWindow().getDecorView().setBackgroundColor(Color.LTGRAY);
+        });
     }
 }
