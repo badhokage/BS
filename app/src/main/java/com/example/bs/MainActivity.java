@@ -1,5 +1,6 @@
 package com.example.bs;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,10 +15,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button buttonChangeText = findViewById(R.id.buttonChangeText);
+        Button buttonChangeTextColor = findViewById(R.id.buttonChangeTextColor);
+
         TextView textView = findViewById(R.id.textView);
 
         buttonChangeText.setOnClickListener(v -> {
             textView.setText("The button was clicked!");
+        });
+
+        buttonChangeTextColor.setOnClickListener(v -> {
+            textView.setTextColor(Color.RED);
         });
     }
 }
